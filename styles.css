@@ -1,0 +1,122 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: wheat;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #333;
+    box-shadow: 0 2px 4px rgba(5, 0, 0, 0.6);;
+}
+
+.navbar img {
+    max-width: 60px; /* Adjust logo size */
+}
+
+.navbar-links {
+    display: flex;
+    gap: 20px; /* Space between links */
+}
+
+.navbar-links a {
+    margin-top: 10%;
+    margin-left: 25%;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar #T {
+    margin-right: 35%;
+    color: white;
+}
+
+.menu-toggle {
+    display: none; /* Hidden by default */
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+.close-button {
+    margin-top: 10px;
+    margin-left: 120px;
+    color: red;
+    font-size: 45px;
+    cursor: pointer;
+    margin-bottom: 10px; /* Space from links */
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: #333;
+        height: 100vh;
+        width: 50%;
+        padding-top: 50px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* Main Content */
+.main-content {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.main-content h2 {
+    font-size: 1.8em;
+    color: #333;
+    text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+}
+
+.main-content h2 span {
+    display: block;
+    font-size: 1.2em;
+    margin-top: 10px;
+    color: darkblue;
+}
+
+.main-content p {
+    font-size: 1.2em;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* Image Styling */
+.main-content img {
+    width: 250px;
+    height: 100px;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+/* Footer */
+.footer {
+    background-color: #333; /* Dark footer */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

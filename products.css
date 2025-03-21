@@ -1,0 +1,170 @@
+/* styles.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: wheat;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #333;
+    box-shadow: 0 2px 4px rgba(5, 0, 0, 0.6);;
+}
+
+.navbar img {
+    max-width: 60px; /* Adjust logo size */
+}
+
+.navbar-links {
+    display: flex;
+    gap: 20px; /* Space between links */
+}
+
+.navbar-links a {
+    margin-top: 10%;
+    margin-left: 25%;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar #T {
+    margin-right: 35%;
+    color: white;
+}
+
+.menu-toggle {
+    display: none; /* Hidden by default */
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+.close-button {
+    margin-top: 10px;
+    margin-left: 120px;
+    color: red;
+    font-size: 45px;
+    cursor: pointer;
+    margin-bottom: 10px; /* Space from links */
+}
+
+/* Close button style */
+.close-button {
+    margin-top: 10px;
+    margin-left: 120px;
+    color: red;
+    font-size: 45px;
+    cursor: pointer;
+    margin-bottom: 10px; /* Space from links */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .navbar-links {
+        display: none; /* Hide links by default on mobile */
+        flex-direction: column;
+        position: absolute;
+        top: 0; /* Below navbar */
+        right: 0;
+        background-color: #333;
+        height: 100%;
+        width: 50%; /* Full width */
+        z-index: 1; /* Ensure links are above other elements */
+    }
+
+    .navbar-links.active {
+        display: flex; /* Show links when active */
+    }
+
+    .menu-toggle {
+        display: block; /* Show the toggle button */
+    }
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between items */
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.product-item {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.product-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.product-price {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.buy-button {
+    background: linear-gradient(135deg, #4CAF50, #2E7D32);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+.buy-button:hover {
+    background: linear-gradient(135deg, #2E7D32, #1B5E20);
+    transform: scale(1.05);
+}
+.footer {
+    background-color: #333; /* Dark footer */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+
+h2 {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+h2 span {
+    display: block;
+    font-size: 1em;
+    color: #777;
+    margin-top: 5px;
+}
